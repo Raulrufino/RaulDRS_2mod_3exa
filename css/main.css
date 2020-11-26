@@ -338,4 +338,68 @@ template {
 [hidden] {
   display: none;
 }
+
+.container {
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.container__header {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  padding: 0 2rem;
+  background-color: #c4c4c4;
+}
+
+.header__nav input {
+  display: none;
+}
+
+.nav__links {
+  display: flex;
+}
+
+.enlace {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5625rem;
+}
+
+@media only screen and (min-width: 300px) {
+  label {
+    display: block;
+  }
+
+  .enlace {
+    display: none;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .container__header {
+    flex-direction: row-reverse;
+  }
+
+  label {
+    display: block;
+  }
+
+  .enlace {
+    display: none;
+  }
+}
+@media only screen and (min-width: 900px) {
+  label {
+    display: none;
+  }
+
+  .nav__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 /*# sourceMappingURL=main.css.map */
